@@ -1,0 +1,18 @@
+= ChatEngine
+
+ChatEngine is a Rails 3 Engine created to give web applications an easy to use chat system.
+
+= Aim
+
+The aim of this project is to make adding a chat engine to a Rails application quick and easy.
+
+= Future Features
+
+* Guest users able to add comments
+* Chat modules can be stacked to enhance the chats functionality
+* Easy to use admin panel for managing chat functionality
+* Easy to use admin panel for managing features available to users
+* Asynchronous chat messaging
+* Manage multiple chatrooms
+
+This project rocks and uses MIT-LICENSE.

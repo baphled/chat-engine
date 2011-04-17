@@ -1,0 +1,20 @@
+require 'autotest/growl'
+
+Autotest::Growl::clear_terminal = false
+Autotest::Growl::one_notification_per_run = true
+Autotest::Growl::sticky_failure_notifications = true
+Autotest::Growl::show_modified_files = true
+
+Autotest.add_hook(:initialize) {|at|
+  at.add_exception %r{^\.git}  # ignore Version Control System
+  at.add_exception %r{^\./.git}  # ignore Version Control System
+  at.add_exception %r{^./tmp}  # ignore temp files, lest autotest will run again, and again...
+  at.add_exception %r{^.*.log}  # ignore temp files, lest autotest will run again, and again...
+  at.add_exception %r{^.*.data}  # ignore temp files, lest autotest will run again, and again...
+  at.add_exception %r{^.*.pid}  # ignore temp files, lest autotest will run again, and again...
+  at.add_exception %r{^spec/dummy/tmp/capybara/.*\.html$}  # ignore temp files, lest autotest will run again, and again...
+  #  at.clear_mappings         # take out the default (test/test*rb)
+  at.add_mapping(%r{^lib/.*\.rb$}) {|f, _|
+    Dir['spec/**/*.rb']
+  }
+}

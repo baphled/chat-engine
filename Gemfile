@@ -1,0 +1,26 @@
+source "http://rubygems.org"
+
+gem "rails", "3.0.6"
+gem 'mongoid', :git => "https://github.com/mongoid/mongoid.git"
+gem 'bson_ext'
+
+gem "rspec-rails", ">= 2.0.0.beta"
+
+gem 'nifty_scaffold'
+
+group :development, :test do
+  gem "capybara", ">= 0.4.0"
+  gem "rspec-rails", ">= 2.0.0.beta.20"
+  gem 'cover_me'
+  gem 'webmock', "~> 1.6"
+  gem 'timecop', :git => "https://github.com/liveh2o/timecop.git"
+  gem 'faker'
+  
+  gem 'growl'
+  gem 'guard'
+  gem 'guard-bundler'
+  gem 'guard-rspec'
+  gem 'rb-fsevent'
+
+  gem "launchy"
+end

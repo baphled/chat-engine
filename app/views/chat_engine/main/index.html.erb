@@ -1,0 +1,15 @@
+<% if @messages.present? %>
+<ul>
+<% @messages.each do |message|%>
+  <li>
+    <%= message.time.to_s :short %>: <%= message.body %>
+  </li>
+<% end %>
+</ul>
+<% end %>
+<% form_for(@message) do |f| %>
+  <p>
+    <%= f.text_field :message %>
+  </p>
+  <%= f.submit "Send", :disable_with => 'Sending...' %>
+<% end %>
