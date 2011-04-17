@@ -2,6 +2,7 @@ module ChatEngine
   class Message
     include Mongoid::Document
     
+    field :from
     field :sent, :default => Time.now
     field :body
     

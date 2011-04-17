@@ -3,13 +3,14 @@
   <ul>
   <% @messages.each do |message|%>
     <li>
-      <%= message.sent.to_s :short %>: <%= message.body %>
+      <%= message.from %>: <%= message.body %>
     </li>
   <% end %>
   </ul>
 </section>
 <% end %>
 <% form_for(@message, :url => chat_engine_messages_path, :method => :post) do |f| %>
+  <%= f.hidden_field :from %>
   <p>
     <%= f.text_field :body %>
     <%= f.submit "Send", :disable_with => 'Sending...' %>

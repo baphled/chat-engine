@@ -11,24 +11,8 @@ module ChatEngine
       if @message.save
         redirect_to chat_engine_path
       else
-        render :new
-      end
-    end
-    
-    def edit
-    end
-    
-    def update
-      if @message.update_attributes params[:chat_engine_message]
         redirect_to chat_engine_path
-      else
-        render :edit
       end
-    end
-    
-    private
-    def find_model
-      @message = ChatEngine::Message.find(params[:id]) if params[:id]
     end
   end
 end
