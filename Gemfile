@@ -1,14 +1,16 @@
 source "http://rubygems.org"
 
+gem 'sqlite3'
+
 gem "rails", "3.0.6"
 gem 'mongoid', :git => "https://github.com/mongoid/mongoid.git"
 gem 'bson_ext'
 
-gem "rspec-rails", ">= 2.0.0.beta"
-
-gem 'nifty_scaffold'
+gem 'jquery-rails', '>= 0.2.6'
+gem 'devise', '>= 1.2.rc'
 
 group :development, :test do
+  gem 'nifty-generators'
   gem "capybara", ">= 0.4.0"
   gem "rspec-rails", ">= 2.0.0.beta.20"
   gem 'cover_me'

@@ -1,15 +1,17 @@
-<% if @messages.present? %>
-<ul>
-<% @messages.each do |message|%>
-  <li>
-    <%= message.time.to_s :short %>: <%= message.body %>
-  </li>
+<section id="chat">
+  <% if @messages.present? %>
+  <ul>
+  <% @messages.each do |message|%>
+    <li>
+      <%= message.sent.to_s :short %>: <%= message.body %>
+    </li>
+  <% end %>
+  </ul>
+</section>
 <% end %>
-</ul>
-<% end %>
-<% form_for(@message) do |f| %>
+<% form_for(@message, :url => chat_engine_messages_path, :method => :post) do |f| %>
   <p>
-    <%= f.text_field :message %>
+    <%= f.text_field :body %>
+    <%= f.submit "Send", :disable_with => 'Sending...' %>
   </p>
-  <%= f.submit "Send", :disable_with => 'Sending...' %>
 <% end %>

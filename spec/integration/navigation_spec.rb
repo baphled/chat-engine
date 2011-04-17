@@ -19,11 +19,6 @@ describe "Navigation" do
   end
   
   it "allows me to view the messages on in the chat"
-  
   it "can select a message color"
-  
-  context "administration" do
-    it "can ban a user"
-    it "can send out invitations to join"
-  end
+  it "can send out invitations to join"
 end
