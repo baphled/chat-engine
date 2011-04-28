@@ -1,5 +1,8 @@
 require 'spec_helper'
 
+def sign_in
+  
+end
 describe "Navigation" do
   include Capybara
   
@@ -25,7 +28,7 @@ describe "Navigation" do
     page.should have_content "foobar: my comment"
   end
   
-  it "allows me to view the messages on in the chat"
+  it "displays a list of signed in users"
   it "can select a message color"
   it "can send out invitations to join"
 end
