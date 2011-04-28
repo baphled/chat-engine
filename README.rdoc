@@ -6,6 +6,23 @@ ChatEngine is a Rails 3 Engine created to give web applications an easy to use c
 
 The aim of this project is to make adding a chat engine to a Rails application quick and easy.
 
+= Installation
+
+gem install chat-engine
+
+rails g chat_engine:install
+rails g chat_engine:assets
+
+ChatEngine uses pusher to handle asychronous messaging. We have added a the necessary initializer for you to easily setup Pusher.
+
+Locate chat_engine.rb in your initializer folder and change the following to your Pusher credentials.
+
+Pusher.app_id = 'APP ID'
+Pusher.key = 'KEY'
+Pusher.secret = 'PASS'
+
+You are now ready to go!
+
 = Basic features
 
 * Users able to select colours for their messages
