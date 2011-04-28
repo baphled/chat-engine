@@ -8,6 +8,10 @@ gem 'bson_ext'
 
 gem 'jquery-rails', '>= 0.2.6'
 gem 'devise', '>= 1.2.rc'
+gem "compass", ">= 0.10.4"
+gem "compass-960-plugin", :git => "git://github.com/chriseppstein/compass-960-plugin.git"
+
+gem 'pusher'
 
 group :development, :test do
   gem 'nifty-generators'

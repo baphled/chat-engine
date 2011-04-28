@@ -1,18 +1,20 @@
-<section id="chat">
-  <% if @messages.present? %>
-  <ul>
-  <% @messages.each do |message|%>
-    <li>
-      <%= message.from %>: <%= message.body %>
-    </li>
+<section id="main">
+  <section id="chat">
+    <% if @messages.present? %>
+    <ul class="messages">
+    <% @messages.each do |message| %>
+      <li>
+        <%= message.from %>: <%= message.body %>
+      </li>
+    <% end %>
+    </ul>
   <% end %>
-  </ul>
+  </section>
+  <section id="input">
+    <% form_for(@message, :url => chat_engine_messages_path, :method => :post, :remote => true) do |f| %>
+      <%= f.hidden_field :from %>
+      <%= f.text_field :body, :placeholder => "Enter your message here..." %>
+      <%= f.submit "Send", :disable_with => 'Sending...' %>
+    <% end %>
+  </section>
 </section>
-<% end %>
-<% form_for(@message, :url => chat_engine_messages_path, :method => :post) do |f| %>
-  <%= f.hidden_field :from %>
-  <p>
-    <%= f.text_field :body %>
-    <%= f.submit "Send", :disable_with => 'Sending...' %>
-  </p>
-<% end %>

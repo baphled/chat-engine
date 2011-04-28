@@ -1,0 +1,169 @@
+section#chat {
+  width: auto;
+}
+#chat ul {
+  border-radius: 11px;
+  -moz-border-radius: 11px;
+  -webkit-border-radius: 11px;
+  color: #858585;
+  background: #E6F3F7;
+  padding: 40px;
+  height: 300px;
+  overflow-y: auto;
+}
+/* line 7, ../../../app/stylesheets/forms.scss */
+form *:focus {
+  outline: none;
+}
+/* line 9, ../../../app/stylesheets/forms.scss */
+form input::-webkit-input-placeholder,
+form textarea::-webkit-input-placeholder {
+  color: #CFCFCF;
+}
+/* line 12, ../../../app/stylesheets/forms.scss */
+form input:-moz-placeholder, form textarea:-moz-placeholder {
+  color: #CFCFCF;
+}
+
+form label {
+  font-weight: normal;
+  text-transform: lowercase;
+}
+
+form fieldset.inline ol {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+
+form fieldset.inline ol li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+form fieldset.inline ol li:first-child, form fieldset.inline ol li.first {
+  padding-left: 0;
+}
+
+form fieldset.inline ol li:last-child, form fieldset.inline ol li.last {
+  padding-right: 0;
+}
+
+form fieldset, form ol {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  list-style: none;
+}
+
+form fieldset li, form ol li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+}
+
+form .error {
+  padding: 0px;
+}
+
+form p.inline-errors, form p.error {
+  text-align: right;
+  background: none;
+  border-color: none;
+  border: none;
+  clear: both;
+  font-size: 12px;
+}
+
+form fieldset .inline-hints {
+  text-align: right;
+  font-size: 13px;
+  color: #999;
+  text-align: left;
+  width: 430px;
+  margin-right: 4px;
+  padding: 0;
+}
+
+form div {
+}
+
+form label {
+  border-right: 1px solid #D3DEE1;
+  color: #858585;
+  height: 20px;
+  margin: 7px;
+  padding: 10px;
+  text-align: left;
+  display: inline-block;
+  width: 76px !important;
+}
+
+
+#main {
+  width: 70%;
+  margin: 0px auto;
+  display: block;
+  border-radius: 11px;
+  -moz-border-radius: 11px;
+  -webkit-border-radius: 11px;
+  background-color: #889919;
+  padding: 20px;
+}
+section#chat li {
+  list-style: none;
+}
+
+#input {
+  display: inline-block;
+}
+form input[type='text'] {
+  border-radius: 11px;
+  -moz-border-radius: 11px;
+  -webkit-border-radius: 11px;
+  width: 580px;
+  height: 60px;
+  margin-top: 20px;
+  font-size: 25px;
+  border: none;
+  color: #858585;
+  background: #E6F3F7;
+  padding-top: 5px;
+  padding-left: 5px;
+  float: left;
+}
+
+form input[type='submit'] {
+  width: 190px;
+  height: 68px;
+  border-radius: 11px;
+  -moz-border-radius: 11px;
+  -webkit-border-radius: 11px;
+  margin-top: 20px;
+  border: none;
+  margin-left: 64px;
+  font-size: 30px;
+  color: #889919;
+  background: #CADE3A;
+  float: right;
+}
+
+form.user input[type='submit']:hover {
+  background: #D3E45C;
+  color: #89991A;
+  cursor: pointer;
+}
+
+form .form-submit {
+  width: 200px;
+  float: right;
+}
