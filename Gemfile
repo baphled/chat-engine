@@ -12,6 +12,8 @@ gem "compass", ">= 0.10.4"
 gem "compass-960-plugin", :git => "git://github.com/chriseppstein/compass-960-plugin.git"
 
 gem 'pusher'
+gem 'rdiscount'
+gem 'redcarpet'
 
 group :development, :test do
   gem 'nifty-generators'

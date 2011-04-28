@@ -9,6 +9,7 @@ module ChatEngine
         
         # JavaScript
         copy_file"public/javascripts/chat-engine.js","public/javascripts/chat-engine.js"
+        copy_file"public/javascripts/showdown.js","public/javascripts/showdown.js"
         copy_file"public/javascripts/jquery.cssemoticons.min.js","public/javascripts/jquery.cssemoticons.min.js"
         
         # Stylesheets

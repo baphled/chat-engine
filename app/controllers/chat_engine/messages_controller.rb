@@ -11,6 +11,8 @@ module ChatEngine
     end
 
     def create
+      params[:chat_engine_message][:body] = "#{params[:chat_engine_message][:from]}: #{params[:chat_engine_message][:body]}"
+      p params[:chat_engine_message]
       @message = ChatEngine::Message.new params[:chat_engine_message]
       if @message.save
         Pusher['messages'].trigger('new-message', @message.attributes)

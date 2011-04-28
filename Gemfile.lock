@@ -144,6 +144,8 @@ GEM
       thor (~> 0.14.4)
     rake (0.8.7)
     rb-fsevent (0.4.0)
+    rdiscount (1.6.8)
+    redcarpet (1.11.4)
     rspec (2.5.0)
       rspec-core (~> 2.5.0)
       rspec-expectations (~> 2.5.0)
@@ -202,6 +204,8 @@ DEPENDENCIES
   pusher
   rails (= 3.0.6)
   rb-fsevent
+  rdiscount
+  redcarpet
   rspec-rails (>= 2.0.0.beta.20)
   sqlite3
   timecop!
